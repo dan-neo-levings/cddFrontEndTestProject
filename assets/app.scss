@@ -13,8 +13,7 @@ $handwritingFont:'Architects Daughter', cursive;
     box-sizing: border-box;
 }
 
-
-
+/*NAVIGATION ---------*/
 nav {
     position:fixed;
     right:100px;
@@ -53,12 +52,14 @@ nav {
     }
 }
 
+/*GIOVANNI-------------*/
 .giovanni {
     position:fixed;
     transform:translate(-50%, -50%);
     left:50%;
     top:40%;
     transition:1s all;
+    z-index:-2;
     &.giovanni--right {
         left:70%;
     }
@@ -88,6 +89,8 @@ nav {
         opacity:1;
     }
 }
+
+/*LEONDARD-------------*/
 .leonardo {
     position:fixed;
     transform:translate(-50%, -50%);
@@ -95,6 +98,7 @@ nav {
     top:50%;
     transition:2s all;
     opacity:0;
+    z-index:-1;
     &.show {
         left:67%;
         opacity: 1;
@@ -104,6 +108,7 @@ nav {
     }
 }
 
+/*SECTION TEXTS-------------- */
 .section-one-text {
     width:500px;
     position:fixed;
@@ -151,7 +156,6 @@ nav {
     transform:translateY(-50%);
     transition:1.5s all;
     opacity:0;
-    z-index:10;
     &.show {
         opacity:1;
         left:15%;
@@ -188,6 +192,7 @@ nav {
     }
 }
 
+/*TYPOGRAPHY -----------*/
 h1 {
     color:$primaryColor;
     text-transform: uppercase;
@@ -236,6 +241,7 @@ button {
     text-align:center;
     opacity:0;
     transition:.5s all;
+    z-index:15;
     span {
         font-size:21px;
         display:inline-block;
@@ -245,7 +251,7 @@ button {
         opacity:1;
     }
 }
-
+/*ANIMATIONS -----------*/
 .giovanni--jump {
     -webkit-animation: jump 1.5s ease 0s 1 normal ;
     animation: jump 1.5s ease 0s 1 normal ;

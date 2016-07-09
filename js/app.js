@@ -40,7 +40,8 @@ var animating = false;
 $(document).on('mousewheel', function(e) {
     e.preventDefault();
     var currentPosition = $('.active').index('.bullet')+1;
-    var movement = e.originalEvent.deltaY;
+    var movement = e.originalEvent.deltaY || -e.originalEvent.wheelDelta;
+    console.log(e);
     if(animating) {
         return;
     }

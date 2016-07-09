@@ -4,6 +4,7 @@
   margin: 0;
   box-sizing: border-box; }
 
+/*NAVIGATION ---------*/
 nav {
   position: fixed;
   right: 100px;
@@ -36,12 +37,14 @@ nav {
     nav .bullet.seen::before {
       top: 100%; }
 
+/*GIOVANNI-------------*/
 .giovanni {
   position: fixed;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 40%;
-  transition: 1s all; }
+  transition: 1s all;
+  z-index: -2; }
   .giovanni.giovanni--right {
     left: 70%; }
   .giovanni.giovanni--back {
@@ -66,19 +69,22 @@ nav {
     top: 0;
     opacity: 1; }
 
+/*LEONDARD-------------*/
 .leonardo {
   position: fixed;
   transform: translate(-50%, -50%);
   left: 150%;
   top: 50%;
   transition: 2s all;
-  opacity: 0; }
+  opacity: 0;
+  z-index: -1; }
   .leonardo.show {
     left: 67%;
     opacity: 1; }
   .leonardo.leonardo--up {
     left: 150%; }
 
+/*SECTION TEXTS-------------- */
 .section-one-text {
   width: 500px;
   position: fixed;
@@ -119,8 +125,7 @@ nav {
   top: 40%;
   transform: translateY(-50%);
   transition: 1.5s all;
-  opacity: 0;
-  z-index: 10; }
+  opacity: 0; }
   .section-three-text.show {
     opacity: 1;
     left: 15%; }
@@ -151,6 +156,7 @@ nav {
     .section-four-text {
       width: 75%; } }
 
+/*TYPOGRAPHY -----------*/
 h1 {
   color: #a1ff91;
   text-transform: uppercase;
@@ -197,7 +203,8 @@ button {
   left: 0;
   text-align: center;
   opacity: 0;
-  transition: .5s all; }
+  transition: .5s all;
+  z-index: 15; }
   .speech-bubble span {
     font-size: 21px;
     display: inline-block;
@@ -205,6 +212,7 @@ button {
   .speech-bubble.show {
     opacity: 1; }
 
+/*ANIMATIONS -----------*/
 .giovanni--jump {
   animation: jump 1.5s ease 0s 1 normal; }
 
