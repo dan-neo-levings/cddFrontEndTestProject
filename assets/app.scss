@@ -1,0 +1,335 @@
+@import 'https://fonts.googleapis.com/css?family=Alegreya+Sans:900|Architects+Daughter';
+
+$lightGrey:#d5dbdc;
+$primaryColor:#a1ff91;
+$secondaryColor:#206cad;
+
+$headingsFont:'Alegreya Sans', sans-serif;
+$handwritingFont:'Architects Daughter', cursive;
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+
+
+nav {
+    position:fixed;
+    right:100px;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:10;
+    @media screen and (max-width:960px) {
+        right:20px;
+    }
+    .bullet {
+        width:20px;
+        height:20px;
+        border-radius:100%;
+        margin:10px 0;
+        background:$lightGrey;
+        overflow:hidden;
+        position:relative;
+        cursor:pointer;
+        &::before {
+            content:'';
+            background:$primaryColor;
+            width:100%;
+            height:100%;
+            border-radius:100%;
+            position:absolute;
+            top:-100%;
+            transition:.8s all ease-in-out;
+
+        }
+        &.active::before {
+            top:0;
+        }
+        &.seen::before {
+            top:100%;
+        }
+    }
+}
+
+.giovanni {
+    position:fixed;
+    transform:translate(-50%, -50%);
+    left:50%;
+    top:40%;
+    transition:1s all;
+    &.giovanni--right {
+        left:70%;
+    }
+    &.giovanni--back {
+        left:50%;
+        opacity: .7;
+        transform:translate(-50%, -50%) scale(.7);
+    }
+    &.giovanni--up {
+        top:-50%;
+    }
+    &:after {
+        content:'';
+        width:120px;
+        height:150px;
+        background:url('http://cliparts.co/cliparts/kc8/neo/kc8neoAri.png') no-repeat;
+        background-size:contain;
+        position:absolute;
+        left:39%;
+        transform:rotate(10deg);
+        top:-100%;
+        opacity:0;
+        transition:1s all ease;
+    }
+    &.giovanni--dress:after {
+        top:0;
+        opacity:1;
+    }
+}
+.leonardo {
+    position:fixed;
+    transform:translate(-50%, -50%);
+    left:150%;
+    top:50%;
+    transition:2s all;
+    opacity:0;
+    &.show {
+        left:67%;
+        opacity: 1;
+    }
+    &.leonardo--up {
+        left:150%;
+    }
+}
+
+.section-one-text {
+    width:500px;
+    position:fixed;
+    bottom:5%;
+    left:50%;
+    text-align:center;
+    transform:translate(-50%, -50%);
+    transition:1s all;
+    &.move-down {
+        bottom:-50%;
+    }
+    @media screen and (max-width:480px) {
+        bottom:10%;
+    }
+}
+
+.section-two-text {
+    width:500px;
+    position:fixed;
+    left:-125%;
+    top:40%;
+    transform:translateY(-50%);
+    transition:1s all;
+    opacity:0;
+    &.show {
+        left:15%;
+        opacity:1;
+        @media screen and (max-width:480px) {
+            left:0%;
+            width:100%;
+            top:80%;
+            padding:20px;
+        }
+    }
+    &.fade-away {
+        opacity:0;
+    }
+
+}
+
+.section-three-text {
+    position:fixed;
+    left:-55%;
+    top:40%;
+    transform:translateY(-50%);
+    transition:1.5s all;
+    opacity:0;
+    z-index:10;
+    &.show {
+        opacity:1;
+        left:15%;
+        @media screen and (max-width:600px) {
+            left:0;
+            width:100%;
+            padding:20px;
+            top:80%;
+        }
+    }
+    &.up {
+        left:-50%;
+    }
+}
+
+.section-four-text {
+    position:fixed;
+    left:50%;
+    top:200%;
+    transform:translate(-50%, -50%);
+    transition:2s all;
+    text-align:center;
+    opacity: 0;
+    &.show {
+        top:50%;
+        opacity: 1;
+    }
+    img {
+        width:50%;
+        float:left;
+    }
+    @media screen and (max-width:480px) {
+        width:75%;
+    }
+}
+
+h1 {
+    color:$primaryColor;
+    text-transform: uppercase;
+    font-family:$headingsFont;
+    font-size:80px;
+    letter-spacing: 10px;
+    @media screen and (max-width:480px) {
+        font-size:50px;
+    }
+}
+span {
+    color:$secondaryColor;
+    font-family:$handwritingFont;
+    font-size:28px;
+    @media screen and (max-width:480px) {
+        font-size:18px;
+    }
+}
+button {
+    background:$primaryColor;
+    color:$secondaryColor;
+    font-family:$headingsFont;
+    border:none;
+    padding:20px;
+    border-radius:5px;
+    font-size:40px;
+    margin-right:20px;
+    cursor:pointer;
+    @media screen and (max-width:480px) {
+        width:100%;
+        margin:10px 0;
+        padding:10px;
+        font-size:20px;
+    }
+}
+
+.speech-bubble {
+    background:url(../images/speech-bubble.png) no-repeat;
+    background-size:contain;
+    font-family:$handwritingFont;
+    width:200px;
+    height:200px;
+    position:absolute;
+    top:0;
+    left:0;
+    text-align:center;
+    opacity:0;
+    transition:.5s all;
+    span {
+        font-size:21px;
+        display:inline-block;
+        padding:51px 40px 40px 23px;
+    }
+    &.show {
+        opacity:1;
+    }
+}
+
+.giovanni--jump {
+    -webkit-animation: jump 1.5s ease 0s 1 normal ;
+    animation: jump 1.5s ease 0s 1 normal ;
+}
+
+@-webkit-keyframes jump {
+ 0%{
+	margin-top:0
+ }
+ 20%{
+	margin-top:0;
+ }
+ 40%{
+	margin-top:-60px;
+ }
+ 50%{
+	margin-top:0;
+ }
+ 60%{
+	margin-top:-60px;
+ }
+ 80%{
+	margin-top:0;
+ }
+ 100%{
+	margin-top:0;
+ }
+}
+
+@keyframes jump {
+    0%{
+   	margin-top:0
+    }
+    20%{
+   	margin-top:0;
+    }
+    40%{
+   	margin-top:-60px;
+    }
+    50%{
+   	margin-top:0;
+    }
+    60%{
+   	margin-top:-60px;
+    }
+    80%{
+   	margin-top:0;
+    }
+    100%{
+   	margin-top:0;
+    }
+}
+
+.giovanni--spin {
+    -webkit-animation: rotate 1s linear 0s 1 normal ;
+    animation: rotate 1s linear 0s 1 normal ;
+}
+
+@-webkit-keyframes rotate {
+    0%{
+       -webkit-transform:translate(-50%, -50%) rotate(0deg);
+       transform:translate(-50%, -50%) rotate(0deg);
+    }
+    60%{
+       -webkit-transform:translate(-50%, -50%) rotate(-10deg);
+       transform:translate(-50%, -50%) rotate(-10deg);
+    }
+    100%{
+       -webkit-transform:translate(-50%, -50%) rotate(360deg);
+       transform:translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    0%{
+       -webkit-transform:translate(-50%, -50%) rotate(0deg);
+       transform:translate(-50%, -50%) rotate(0deg);
+    }
+    60%{
+       -webkit-transform:translate(-50%, -50%) rotate(-10deg);
+       transform:translate(-50%, -50%) rotate(-10deg);
+    }
+    100%{
+       -webkit-transform:translate(-50%, -50%) rotate(360deg);
+       transform:translate(-50%, -50%) rotate(360deg);
+    }
+}

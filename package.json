@@ -1,0 +1,31 @@
+{
+  "name": "cdd-frontendtest",
+  "version": "1.0.0",
+  "description": "A front end test sent my CDDNation",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-inject": "^4.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-util": "^3.0.7",
+    "wiredep": "^4.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "cdd-frontendtest"
+  },
+  "keywords": [
+    "cdd",
+    "front",
+    "end",
+    "test"
+  ],
+  "author": "Dan Levigns",
+  "license": "ISC"
+}

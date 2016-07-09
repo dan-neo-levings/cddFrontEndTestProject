@@ -1,0 +1,24 @@
+{
+  "name": "cdd-frontendtest",
+  "description": "A front end test sent my CDDNation",
+  "main": "index.html",
+  "authors": [
+    "Dan Levigns"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "cdd",
+    "front",
+    "end",
+    "test"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
