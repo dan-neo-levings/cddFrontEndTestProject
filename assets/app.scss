@@ -203,7 +203,7 @@ h1 {
         font-size:50px;
     }
 }
-span {
+span.type--handwritten {
     color:$secondaryColor;
     font-family:$handwritingFont;
     font-size:28px;
@@ -211,7 +211,7 @@ span {
         font-size:18px;
     }
 }
-button {
+button.btn--primary {
     background:$primaryColor;
     color:$secondaryColor;
     font-family:$headingsFont;

@@ -51,7 +51,6 @@ $(document).on('mousewheel', function(e) {
         switch(currentPosition) {
             case 2:
                 goToSection(1);
-
                 break;
             case 3:
                 goToSection(2);

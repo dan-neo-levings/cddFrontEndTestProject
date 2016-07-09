@@ -167,15 +167,15 @@ h1 {
     h1 {
       font-size: 50px; } }
 
-span {
+span.type--handwritten {
   color: #206cad;
   font-family: "Architects Daughter", cursive;
   font-size: 28px; }
   @media screen and (max-width: 480px) {
-    span {
+    span.type--handwritten {
       font-size: 18px; } }
 
-button {
+button.btn--primary {
   background: #a1ff91;
   color: #206cad;
   font-family: "Alegreya Sans", sans-serif;
@@ -186,7 +186,7 @@ button {
   margin-right: 20px;
   cursor: pointer; }
   @media screen and (max-width: 480px) {
-    button {
+    button.btn--primary {
       width: 100%;
       margin: 10px 0;
       padding: 10px;
